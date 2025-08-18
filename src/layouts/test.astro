@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dynamic Title</title>
+  <script>
+  
+const base = "Hey there fellow furry >.< how is your day going?ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ";
+const gap = "     ";
+let scroll = base + gap;
+
+setInterval(() => {
+  // move first character to the end -> scrolls LEFT
+  scroll = scroll.slice(1) + scroll[0];
+  document.title = scroll;
+}, 120); // tweak for smoother/faster
+
+  </script>
+</head>
+<body>
+  <h1>Check the tab title every 5 seconds!</h1>
+</body>
+</html>
